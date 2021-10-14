@@ -50,12 +50,11 @@ export default function SelectedProduct({ product }) {
             borderRadius: 10,
             }}>
             <CardActionArea onClick={handleToggle}>
-            <Skeleton
-                sx={{ bgcolor: 'light grey' }}
-                variant="rectangular"
-                width={400}
-                height={150}
-            />
+            <CardMedia
+                component="img"
+                image={image}
+                alt={details}
+            /> 
             <Backdrop
                 sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
                 open={open}
@@ -63,7 +62,6 @@ export default function SelectedProduct({ product }) {
                 >
                 <CircularProgress color="inherit"/>
             </Backdrop>
-            <CardMedia name={product.style} image={image} alt='pic' /> 
                 <CardContent>
                     <Typography gutterBottom variant="h4" component="div">
                         {product.name}

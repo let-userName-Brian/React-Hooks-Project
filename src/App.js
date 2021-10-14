@@ -68,7 +68,7 @@ function App() {
               >
               </IconButton>
               <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              We love Images
+              Walmart.Galvanize
               </Typography>
               <Button color="inherit">Login</Button>
             </Toolbar>
