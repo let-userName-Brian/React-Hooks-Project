@@ -93,7 +93,7 @@ export default App;
 
 [/] Display a list of products as cards with text of description
 
-[] Make each product clickable so that when clicked, it displays an image from the API for 
+[/ sorta ] Make each product clickable so that when clicked, it displays an image from the API for 
     that product (Products data service - subsection "styles")
 
 [] Make it so that only one product's photo is visible at a time, and clicking it again closes 
