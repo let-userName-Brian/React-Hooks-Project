@@ -1,5 +1,6 @@
 import { useEffect, useState, createContext } from 'react';
 import AllProducts from './Components/AllProducts.js';
+import "./App.css"
 
 
 const url = "http://52.26.193.201:3000"
@@ -48,11 +49,10 @@ function App() {
   if (Array.isArray(products) && products.length > 0) {
     return (
         <FetchAPIContext.Provider value={FetchAPI}>
-          <div>
+          <div className="App">
             <AllProducts products={products} />
           </div>
         </FetchAPIContext.Provider>
-      
     )
   } else { return <div>Im slow, hold on</div> }
 }
