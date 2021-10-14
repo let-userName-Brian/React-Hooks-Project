@@ -74,13 +74,13 @@ export default function SelectedProduct({ product }) {
                     <Typography variant="body1" color="text.secondary">
                         {product.description}
                     </Typography>
-                    <IconButton color="primary" aria-label="add to shopping cart">
+                    {/* <IconButton color="primary" aria-label="add to shopping cart">
                         <AddShoppingCartIcon />
-                    </IconButton>
+                    //****not working properly  </IconButton> */}
                 </CardContent>
             </CardActionArea>
         </Card>
     </Grid>
     );
 }
-//need to add clickable functions to display images
+//need to add clickables to display images

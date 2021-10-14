@@ -1,6 +1,13 @@
 import { useEffect, useState, createContext } from 'react';
 import AllProducts from './Components/AllProducts.js';
 import "./App.css"
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+
 
 
 const url = "http://52.26.193.201:3000"
@@ -48,11 +55,29 @@ function App() {
 
   if (Array.isArray(products) && products.length > 0) {
     return (
-        <FetchAPIContext.Provider value={FetchAPI}>
-          <div className="App">
-            <AllProducts products={products} />
-          </div>
-        </FetchAPIContext.Provider>
+      <FetchAPIContext.Provider value={FetchAPI}>
+        <Box sx={{ flexGrow: 1 }}>
+          <AppBar position="static">
+            <Toolbar>
+              <IconButton
+                size="large"
+                edge="start"
+                color="secondary"
+                aria-label="menu"
+                sx={{ mr: 2 }}
+              >
+              </IconButton>
+              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              We love Images
+              </Typography>
+              <Button color="inherit">Login</Button>
+            </Toolbar>
+          </AppBar>
+        </Box>
+        <div className="App">
+          <AllProducts products={products} />
+        </div>
+      </FetchAPIContext.Provider>
     )
   } else { return <div>Im slow, hold on</div> }
 }
@@ -63,7 +88,7 @@ export default App;
 /*
 [/] Make an API call to get a product list (Products data service, subsection "list")
 
-[] Make an API call to get specific details on a given product when its entry is clicked 
+[/] Make an API call to get specific details on a given product when its entry is clicked 
     (Products data service - subsection ":productId")
 
 [/] Display a list of products as cards with text of description
